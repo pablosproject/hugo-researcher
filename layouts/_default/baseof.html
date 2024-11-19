@@ -10,5 +10,9 @@
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
+
+        {{ if and (not hugo.IsServer) .Site.Data.consent }}
+        {{- partial "consent.html" . -}}
+        {{ end }}
     </body>
 </html>

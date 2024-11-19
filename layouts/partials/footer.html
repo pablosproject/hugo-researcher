@@ -1,5 +1,5 @@
 <div id="footer" class="mb-5">
-    <br/>
+    <hr>
     {{ if .Site.Params.socialIcons }}
     <div class="container text-center">
         {{ range $item := .Site.Params.socialIcons }}
@@ -9,7 +9,7 @@
     {{ end }}
     {{ with .Site.Params.footer }}
         <div class="container text-center">
-            <a href="{{ .url | absURL }}" title="{{ .text }}"><small>{{ .text }}</small></a>
+            <a href="{{ .url | absURL }}" title="{{ .text }}" {{ if .blank }}target="_blank"{{ end }}><small>{{ .text }}</small></a>
         </div>
     {{ end }}
 </div>
