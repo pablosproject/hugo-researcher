@@ -6,7 +6,7 @@
           {{ end }}
           {{ .Site.Title }}
         </a>
-        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+        <div class="navbar-nav flex-row flex-wrap justify-content-center align-items-center">
             {{ with .Site.Menus.main }}
                 {{ $navbar_len := len . }}
                 {{ range $i, $nav_item := . }}
@@ -17,7 +17,9 @@
                         <span class="nav-item navbar-text mx-1">/</span>
                     {{ end }}
                 {{ end }}
+                <span class="nav-item navbar-text mx-1">/</span>
             {{ end }}
+            <button id="theme-toggle" class="theme-toggle nav-item" type="button" aria-label="Toggle theme" title="Toggle theme">☾</button>
         </div>
     </nav>
 </div>
